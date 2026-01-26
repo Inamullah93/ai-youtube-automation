@@ -1,8 +1,7 @@
 # ai-youtube-automation
 This project automates the creation of YouTube knowledge videos using AI. It takes a topic or concept as input, generates a clear avatar-based script, converts it into a short video with AI voice narration, and uploads it to a YouTube channel automatically using n8n workflows.
-## **What This Automation Does**
 
-
+## **How This automation works**
 
 1\. Detects a new lesson added in Google Sheets
 
@@ -14,32 +13,17 @@ This project automates the creation of YouTube knowledge videos using AI. It tak
 
 5\. Writes the video link back to Google Sheets
 
+## Tools & Services Used
 
-
-## **Tools \& Services Used**
-
-
-
-1: Trigger: Google Sheets → Detect new lessons
-
-2: Script: OpenAI API (ChatGPT) → Convert text to video script
-
-3: Video: HeyGen → Combine voice \& script into video
-
-4: Upload: YouTube / Host the video
-
-5: Save Link: Google Sheets /Keep track of uploaded videos
-
-6: Workflow: n8n → Automate the entire process
-
----
+- Google Sheets – Lesson source and trigger
+- OpenAI (ChatGPT) – Generate video scripts
+- HeyGen – Create avatar-based talking-head videos
+- YouTube – Host and publish videos
+- n8n – Automate the entire workflow
 
 ## **How to setup Credentials** 
 
-
-
-This workflow does not include any Credentials. You must add your own credentials to make it work.
-
+⚠️ This repository does not include any API keys or credentials for security reasons.
 
 
 1️⃣ Google Sheet
@@ -112,57 +96,41 @@ Step 2: Replace the placeholder in the \*\*Header Parameters → Value\*\*
 
 \- Connect YouTube OAuth credentials in n8n  
 
-\- Set the upload mode to \*\*Unlisted\*\* for automatic uploads
+## How to Use This Workflow
 
+1. Download the `ai-youtube-automation.json` file from this repository.  
 
+2. Open n8n.  
 
----
+3. Click **Import Workflow**.  
 
+4. Upload the downloaded `ai-youtube-automation.json` file.  
 
+5. Configure all required credentials:
+   - Google Sheets  
+   - OpenAI (ChatGPT)  
+   - HeyGen  
+   - YouTube  
 
-## **How to Use This Workflow**
+6. Activate the workflow.
 
+## ⚠️ Notes for Users
 
+- This workflow can be customized to match your specific use case.
 
-1\. Open n8n  
+- Videos are uploaded directly to the YouTube channel. Upload visibility (Public or Unlisted) can be adjusted in the YouTube node if required.
 
-2\. Click \*\*Import Workflow\*\*  
+- API keys and credentials are not included for security reasons. Add your own credentials before running the workflow.
 
-3\. Upload the `workflow.json` file  
+- Free plans of OpenAI or HeyGen may have usage limits or watermarks.
 
-4\. Configure all required credentials (Google Sheets, OpenAI, HeyGen, YouTube)  
+- Always test changes before using the workflow in a live environment.
 
-5\. Activate the workflow
+- Do not remove the word **"Bearer"** when adding the HeyGen API key in the status check node.
 
+ 👤 Author
+ Created by Inam Ullah, an AI Automation Developer
 
-
----
-
-
-
-\## ⚠️ Notes for Users
-
-
-
-\- API keys are \*\*never included\*\* in the workflow for security reasons  
-
-\- Free plans of HeyGen / OpenAI may have usage limits  
-
-\- Always double-check that “Bearer” is not removed in HeyGen nodes  
-
-\- Keep all credentials safe and do not share publicly  
-
-
-
----
-
-
-
-\## 👤 Author
-
-
-
-Created by an AI Automation Engineer using n8n.
 
 
 
