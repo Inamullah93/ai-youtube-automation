@@ -1,4 +1,4 @@
-# automated-ai-youtube-content-generator
+# Ai youtube content generator
 
 This project automates the creation of YouTube knowledge videos using AI. It takes a topic or concept as input, generates a clear avatar-based script, converts it into a video with AI voice narration, and uploads it to a YouTube channel automatically using n8n workflows.
 
@@ -99,7 +99,7 @@ Step 2: Replace the placeholder in the \*\*Header Parameters → Value\*\*
 
 ## How to Use This Workflow
 
-1. Download the `automated-ai-youtube-content-generator.json` file from this repository.  
+1. Download the `Ai youtube content generator.json` file from this repository.  
 
 2. Open n8n.  
 
